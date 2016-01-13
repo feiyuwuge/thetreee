@@ -20,7 +20,7 @@
 			
 			var interval		= setInterval( function(){
 				var startPositionLeft 	= Math.random() * documentWidth - 100,
-				 	startOpacity		= 0.2 + Math.random(),
+				 	startOpacity		= Math.random(),
 					sizeFlake			= options.minSize + Math.random() * options.maxSize,
 					endPositionTop		= documentHeight - 40,
 					endPositionLeft		= startPositionLeft - 100 + Math.random() * 500,
@@ -33,7 +33,7 @@
 						}).animate({
 							top: endPositionTop,
 							left: endPositionLeft,
-							opacity: 0.2
+							opacity: 0.1
 						},durationFall,'linear',function(){
 							$(this).remove()
 						}
